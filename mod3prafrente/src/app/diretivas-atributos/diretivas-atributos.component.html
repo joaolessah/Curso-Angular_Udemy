@@ -1,0 +1,34 @@
+<!-- <ng-content select="h1"></ng-content>
+
+<div *ngIf="nome != 'Joao'">
+    <p [ngClass]="{'active': valor, 'disable': !valor}"> NgClass </p>
+    <p [ngStyle]="{'height': height, 'background': colorPx}"> NgClass </p>
+</div>
+
+
+<hr>
+
+<input [(ngModel)] = "nome"> {{nome}}
+<button (click) = "salvar()">Salvar </button>
+<li *ngFor = "let item of list">{{item.nome}}</li> 
+
+
+ Carrega antes do html ser carregado / encapsula dados
+<ng-template ngFor let-item [ngForOf]="list">
+    <p>
+        {{item.nome}}
+    </p>
+
+</ng-template>
+
+
+<input [(ngModel)] = "nome">
+<button (click) = "salvar()">Salvar </button> 
+<ng-content select="hr"></ng-content> -->
+<!-- 
+<input [(ngModel)] = "nome">
+<button (click) = "salvar()">Salvar </button> 
+
+<li *ngFor = "let item of list">{{item.nome | uppercase}}</li>  -->
+
+{{date | date:'dd/MM/yyyy, h:mm a zzz'}}
