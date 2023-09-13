@@ -3,3 +3,9 @@ ng g m -> cria um módulo para comportar a rota principal da home
 depois ng g c -> crio componentes / 4 e também um componente chamado paginas
 depois altero minha rota principal para o componente home
 criar uma interface para facilitar a comunicação do metodo com o componente
+
+
+ng new
+ng g module
+ng g component
+ng g service
