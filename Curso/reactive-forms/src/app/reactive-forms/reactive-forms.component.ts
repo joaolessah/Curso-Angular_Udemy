@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Form, FormBuilder, FormGroup } from '@angular/forms';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
+import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -9,7 +9,8 @@ import { Form, FormBuilder, FormGroup } from '@angular/forms';
 export class ReactiveFormsComponent implements OnInit{
 
   public cadastroForm: FormGroup = this.formBuilder.group({
-    firsName: ['']
+    firstName: ['', Validators.required],
+    lastName: ['', [Validators.required, Validators.minLength(4)]]
   })
 
   constructor(private formBuilder: FormBuilder){}
@@ -17,4 +18,10 @@ export class ReactiveFormsComponent implements OnInit{
 
   }
 
+  public submitForm(){
+    if(this.cadastroForm.valid){
+      console.log(this.cadastroForm.value.firstName)
+      console.log(this.cadastroForm.value.lastName)
+    }
+    }
 }
